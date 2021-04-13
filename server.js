@@ -86,6 +86,11 @@ app.get('/api/animals/:id', (req, res) => {
 });
 
 app.post('/api/animals', (req, res) => {
+  console.log(req.body);
+  res.json(req.body);
+});
+
+app.post('/api/animals', (req, res) => {
   // set id based on what the next index of the array will be
   req.body.id = animals.length.toString();
 
